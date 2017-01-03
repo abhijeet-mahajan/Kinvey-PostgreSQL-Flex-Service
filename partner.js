@@ -247,18 +247,18 @@ sdk.service(function(err, flex) {
         return new Promise(function (fulfill, reject)
         {
             //aws
-            var connection = new pg.Client({
-                user: "sde",
-                password: "standard",
-                database: "postgres",
-                port: 5432,
-                host: "postgres.cbefmmhfdivt.us-east-1.rds.amazonaws.com",
-                ssl: true
-            });
+            // var connection = new pg.Client({
+            //     user: "",
+            //     password: "",
+            //     database: "",
+            //     port: 5432,
+            //     host: "",
+            //     ssl: 
+            // });
 
             // local
-            // var connectionString = "postgres://postgres:kinvey@localhost:5432/partner";
-            // var connection =new pg.Client(connectionString);
+            var connectionString = "postgres://postgres:kinvey@localhost:5432/partner";
+            var connection =new pg.Client(connectionString);
 
             connection.connect(function(err) {
                 if (err) {
